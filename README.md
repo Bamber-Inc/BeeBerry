@@ -1,4 +1,5 @@
 # BeeBerry
+https://firlands.bamber.co.za/portfolio/beeberry/
 The BeeBerry is ready for action as a mounted unit, right on the hive enabling all the sensors to easily be installed into the hive without wires lying around and interfering with the bee's daily activities. Either can have an internal or external camera mounted on the hive focusing on the bee's activities, which can take random pictures.  These should and then either upload or save them while also providing a live stream of video.  I’m going to try make it as efficient as possible to buffer locally and then upload when the connection is available.
 
 
@@ -13,6 +14,10 @@ The BeeBerry is ready for action as a mounted unit, right on the hive enabling a
   6.2. Inside Temperature
   6.3. Outside Temperature
   6.4. Weight (scale)
+
+# Features per Docker
+  1. timelapse footage of outside door (bee entrance)
+  2.
 
 # Power consumption items
   Plaaning on using the below calculations:
