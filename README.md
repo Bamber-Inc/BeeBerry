@@ -7,7 +7,12 @@ The BeeBerry is ready for action as a mounted unit, right on the hive enabling a
   2. Pi Camera
   3. Solar panel (preferably a 12v) and 10w+
   4. Battery pack 6V
-
+  5. Solar charger and regulator board (still deciding which suites the needs)
+  6. Sensors
+  6.1. Humidity
+  6.2. Inside Temperature
+  6.3. Outside Temperature
+  6.4. Weight (scale)
 
 # Power consumption items
   Plaaning on using the below calculations:
