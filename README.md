@@ -10,10 +10,10 @@ The BeeBerry is ready for action as a mounted unit, right on the hive enabling a
   4. Battery pack 6V
   5. Solar charger and regulator board (still deciding which suites the needs)
   6. Sensors
-  6.1. Humidity
-  6.2. Inside Temperature
-  6.3. Outside Temperature
-  6.4. Weight (scale)
+  6.1 Humidity
+  6.2 Inside Temperature
+  6.3 Outside Temperature
+  6.4 Weight (scale)
 
 # Features per Docker
   1. timelapse footage of outside door (bee entrance)
