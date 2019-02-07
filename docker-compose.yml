@@ -1,6 +1,6 @@
 version: '2'
 services:
-  wpe:
+  timelapse:
     restart: always
     build: ./pi-timelapse
     privileged: true
