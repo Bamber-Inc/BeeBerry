@@ -15,7 +15,3 @@ services:
     build: ./data
     expose:
       - "8080"
-  pi-timelapse:
-    restart: always
-    build: ./pi-timelapse
-    privileged: true
