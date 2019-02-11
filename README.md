@@ -18,7 +18,7 @@ The BeeBerry is ready for action as a mounted unit, right on the hive enabling a
 # Features per Docker
   1. timelapse footage of outside door (bee entrance)
   2.
-testing
+
 # Power consumption items
   Plaaning on using the below calculations:
   Zero idle - ~65 mA

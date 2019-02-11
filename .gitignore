@@ -1,3 +1,4 @@
 series*
-config.yml
 .DS_Store
+Dockerfile.template
+app.js
