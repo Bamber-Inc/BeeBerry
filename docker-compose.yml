@@ -18,6 +18,8 @@ services:
   picamera:
     restart: always
     build: ./picamera
+    expose:
+      - "8081"
     depends_on:
       - data
     privileged: true
