@@ -6,11 +6,13 @@ ENV INITSYSTEM on
 # pip install python deps from requirements.txt
 # For caching until requirements.txt changes
 COPY ./requirements.txt /requirements.txt
+COPY ./timelapse.service /etc/systemd/timelapse.service
 
-RUN READTHEDOCS=True pip install --upgrade pip
 RUN READTHEDOCS=True pip install -r /requirements.txt
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
+CMD systemctl daemon-reload
+CMD service timelapse start
 CMD ["python","picameralapse.py"]
