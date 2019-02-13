@@ -3,7 +3,7 @@ services:
   frontend:
     build: ./frontend
     expose:
-      - "80"
+      - "81"
   proxy:
     build: ./haproxy
     depends_on:
@@ -19,7 +19,7 @@ services:
     restart: always
     build: ./picamera
     expose:
-      - "8081"
+      - "80"
     depends_on:
       - data
     privileged: true

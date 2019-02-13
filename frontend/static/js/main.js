@@ -57,7 +57,7 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
         {
           name: "MemInfo",
           type: "column",
-          color: "#ffffff",
+          color: "#9400D3",
           grouping: false,
           yAxis: 0,
           data: []

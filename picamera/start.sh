@@ -1,3 +1,3 @@
 modprobe v4l2_common && python picameralapse.py &
 cd /data
-python -m SimpleHTTPServer 8081
+python -m SimpleHTTPServer 80
