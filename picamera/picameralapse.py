@@ -101,18 +101,4 @@ if config['create_gif']:
 # Create a video (Requires avconv - which is basically ffmpeg).
 if config['create_video']:
     print '\nCreating video.\n'
-    os.system('avconv -framerate 20 -i ' + dir + '/image%05d.jpg -vf format=yuv420p ' + dir + '/timelapse.mp4')  # noqa
-
-
-# Old config below
-#import time
-#import picamera
-
-#with picamera.PiCamera() as camera:
-#    camera.resolution = (320, 240)
-#    # Camera warm-up time
-#    time.sleep(2)
-#    camera.capture('/data/image.jpg')
-
-#print 'Picture taken'
-#time.sleep(10)
+    os.system('avconv -framerate 20 -i ' + '/image%05d.jpg -vf format=yuv420p ' + dir + '/timelapse.mp4')  # noqa

@@ -18,7 +18,7 @@ interval: 1
 create_gif: False
 
 # Whether to create an video after capturing the time-lapse images.
-create_video: False
+create_video: True
 
 #####################
 # Advanced settings #
@@ -36,4 +36,4 @@ white_balance: { }
   # blue_gain: 1.75
 
 # Rotate the images taken by the camera. Possible value are 0, 90, 180 or 270
-rotation: 0
+rotation: 90
