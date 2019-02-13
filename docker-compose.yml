@@ -19,7 +19,7 @@ services:
     restart: always
     build: ./picamera
     expose:
-      - "88"
+      - "3000"
     depends_on:
       - data
     privileged: true
