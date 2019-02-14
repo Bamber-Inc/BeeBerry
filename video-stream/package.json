@@ -6,7 +6,7 @@
   "homepage": "https://github.com/Bamber-Inc/BeeBerry",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Bamber-Inc/BeeBerry.git",
+    "url": "git@github.com:Bamber-Inc/BeeBerry.git"
   },
   "engines": {
     "node": ">=6.2.0"
