@@ -69,7 +69,7 @@ def capture_image():
         set_camera_options(camera)
 
         # Capture a picture.
-        camera.capture(dir + '/image{0:05d}.jpg'.format(image_number))
+        camera.capture(/data + dir + '/image{0:05d}.jpg'.format(image_number))
         camera.close()
 
         if (image_number < (config['total_images'] - 1)):
@@ -96,9 +96,9 @@ capture_image()
 # Create an animated gif (Requires ImageMagick).
 if config['create_gif']:
     print '\nCreating animated gif.\n'
-    os.system('convert -delay 10 -loop 0 ' + dir + '/image*.jpg ' + dir + '-timelapse.gif')  # noqa
+    os.system('convert -delay 10 -loop 0 ' + /data + dir + '/image*.jpg ' + dir + '-timelapse.gif')  # noqa
 
 # Create a video (Requires avconv - which is basically ffmpeg).
 if config['create_video']:
     print '\nCreating video.\n'
-    os.system('avconv -framerate 20 -i ' + '/image%05d.jpg -vf format=yuv420p ' + dir + '/timelapse.mp4')  # noqa
+    os.system('avconv -framerate 20 -i ' + /data + dir + '/image%05d.jpg -vf format=yuv420p ' + dir + '/timelapse.mp4')  # noqa

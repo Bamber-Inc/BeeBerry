@@ -13,13 +13,15 @@ services:
       - "80:80"
   data:
     build: ./data
+    volumes:
+      - 'resin-data:/data'
     expose:
       - "8080"
   picamera:
     restart: always
     build: ./picamera
+    volumes:
+      - 'resin-data:/data'
     expose:
       - "3000"
-    depends_on:
-      - data
     privileged: true
