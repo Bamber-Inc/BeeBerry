@@ -1,4 +1,6 @@
-version: '2'
+version: '4'
+volumes:
+    resin-data:
 services:
   frontend:
     build: ./frontend
@@ -25,3 +27,10 @@ services:
     expose:
       - "3000"
     privileged: true
+  gpio:
+    build: ./gpio
+    devices:
+      - "/dev/i2c-1:/dev/i2c-1"
+      - "/dev/mem:/dev/mem"
+    cap_add:
+      - SYS_RAWIO
