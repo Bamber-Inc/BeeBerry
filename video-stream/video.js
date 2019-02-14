@@ -3,7 +3,6 @@ const app = express()
 const fs = require('fs')
 const path = require('path')
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
 const {
   exec
 } = require('child_process');
@@ -11,7 +10,7 @@ const {
 server.listen(3000);
 
 app.get('/video', function(req, res) {
-  const path = '/data/sample.mp4'
+  const path = '/data ' + dir + '/timelapse.mp4'
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
@@ -48,7 +47,7 @@ app.listen(3000, function () {
   console.log('Listening on port 3000!')
 })
 
-io.on('connection', function(socket) {
+server.on('connection', function(socket) {
   'use strict';
   console.log('video is streaming');
   let dataLoop = setInterval(function() {

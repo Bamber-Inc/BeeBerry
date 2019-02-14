@@ -1,17 +1,17 @@
 {
-  "name": "resin-websocket",
-  "version": "1.0.0",
-  "description": "Websocket example",
+  "name": "beeberry-websocket",
+  "version": "1.0.1",
+  "description": " Dashboard for the beehive",
   "main": "index.js",
-  "homepage": "https://github.com/resin-io-projects/resin-websocket",
+  "homepage": "https://github.com/Bamber-Inc/BeeBerry",
   "repository": {
     "type": "git",
-    "url": "git@github.com:resin-io-projects/resin-websocket.git"
+    "url": "git@github.com:Bamber-Inc/BeeBerry.git"
   },
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Kostas Lekkas <kostas@resin.io>",
+  "author": "Bryan Bamber <bryan@bamber.za.com>",
   "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.16.2"
