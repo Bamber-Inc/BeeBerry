@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 volumes:
     resin-data:
 services:
@@ -24,13 +24,16 @@ services:
     build: ./picamera
     volumes:
       - 'resin-data:/data'
+    privileged: true
+  video-stream:
+    build: ./video-stream
     expose:
       - "3000"
-    privileged: true
-  gpio:
-    build: ./gpio
-    devices:
-      - "/dev/i2c-1:/dev/i2c-1"
-      - "/dev/mem:/dev/mem"
-    cap_add:
-      - SYS_RAWIO
+
+#  gpio:
+#    build: ./gpio
+#    devices:
+#      - "/dev/i2c-1:/dev/i2c-1"
+#      - "/dev/mem:/dev/mem"
+#    cap_add:
+#      - SYS_RAWIO

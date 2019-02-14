@@ -1,0 +1,18 @@
+{
+  "name": "video-stream",
+  "version": "1.0.1",
+  "description": "Streaming video of the beehive",
+  "main": "video.js",
+  "engines": {
+    "node": ">=6.2.0"
+  },
+  "scripts": {
+    "start": "nodemon video.js"
+  },
+  "author": "daspinola",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0"
+  }
+}
