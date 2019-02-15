@@ -15,8 +15,6 @@ services:
       - "80:80"
   data:
     build: ./data
-    volumes:
-      - 'resin-data:/data'
     expose:
       - "8080"
   picamera:
