@@ -83,11 +83,7 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
 
     socket.on("loadavg", data => {
       var series = chart.series[2];
-      series.addPoint([data.onemin], true, series.data.length > 90);
-    });
-    socket.on("loadavg", data => {
-      var series = chart.series[1];
-      series.addPoint([data.onemin], true, series.data.length > 80);
+      series.addPoint([data.onemin], true, series.data.length > 100);
     });
     socket.on("memory", data => {
       var series = chart.series[0];
