@@ -7,11 +7,10 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
         renderTo: "container"
       },
       title: {
-        text: "CPU Load Average & Memory Usage"
         text: "Current Bee hive STATS"
       },
       subtitle: {
-        text: "Plotting outside and inside temperture with humidity info in real-time using websockets."
+        text: "something else here."
       },
       xAxis: {
         gridLineWidth: 5,
@@ -20,7 +19,7 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
       yAxis: [
         {
           title: {
-            text: "Humidity %age"
+            text: "Memory %age"
           },
           min: 0,
           max: 100,
@@ -28,21 +27,21 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
             {
               value: 0,
               width: 1,
-              colour: "#8088f0"
+              colour: "#808800"
             }
           ],
           opposite: true
         },
         {
           title: {
-            text: "Temperture"
+            text: "LoadAvg"
           },
-          min: 10,
+          min: 0,
           plotLines: [
             {
               value: 0,
               width: 1,
-              colour: "#ff0000",
+              colour: "#008888",
               zIndex: 0
             }
           ]
@@ -56,15 +55,15 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
       },
       series: [
         {
-          name: "Humidity",
+          name: "MemInfo",
           type: "column",
-          color: "#9400D3",
+          color: "#008800",
           grouping: false,
           yAxis: 0,
           data: []
         },
         {
-          name: "Inside Temp",
+          name: "CpuLoad",
           type: "spline",
           yAxis: 1,
           data: []
