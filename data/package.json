@@ -1,17 +1,17 @@
 {
-  "name": "resin-websocket",
+  "name": "beeberry-dataengine",
   "version": "1.0.1",
-  "description": "Websocket example",
+  "description": "backend_data socketio",
   "main": "index.js",
-  "homepage": "https://github.com/resin-io-projects/resin-websocket",
+  "homepage": "https://github.com/Bamber-Inc/BeeBerry",
   "repository": {
     "type": "git",
-    "url": "git@github.com:resin-io-projects/resin-websocket.git"
+    "url": "git@github.com:Bamber-Inc/BeeBerry.git"
   },
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Kostas Lekkas <kostas@resin.io>",
+  "author": "Bryan Bamber <bryan@bamber.za.com>",
   "license": "Apache-2.0",
   "jshintConfig": {
     "esversion": 6,
