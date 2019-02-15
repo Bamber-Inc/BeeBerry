@@ -7,10 +7,10 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
         renderTo: "container"
       },
       title: {
-        text: "Current Bee hive STATS"
+        text: "CPU Load Average & Memory Usage"
       },
       subtitle: {
-        text: "Plotting outside and inside temperture with humidity info in real-time using websockets."
+        text: "Plotting CPU Load and Memory Info in real-time using websockets."
       },
       xAxis: {
         gridLineWidth: 5,
@@ -19,7 +19,7 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
       yAxis: [
         {
           title: {
-            text: "Humidity %age"
+            text: "Memory %age"
           },
           min: 0,
           max: 100,
@@ -27,21 +27,21 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
             {
               value: 0,
               width: 1,
-              colour: "#8088f0"
+              colour: "#808800"
             }
           ],
           opposite: true
         },
         {
           title: {
-            text: "Temperture"
+            text: "LoadAvg"
           },
-          min: 10,
+          min: 0,
           plotLines: [
             {
               value: 0,
               width: 1,
-              colour: "#ff0000",
+              colour: "#008888",
               zIndex: 0
             }
           ]
@@ -55,23 +55,17 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
       },
       series: [
         {
-          name: "Humidity",
+          name: "MemInfo",
           type: "column",
-          color: "#9400D3",
+          color: "#008800",
           grouping: false,
           yAxis: 0,
           data: []
         },
         {
-          name: "Inside Temp",
+          name: "CpuLoad",
           type: "spline",
           yAxis: 1,
-          data: []
-        },
-        {
-          name: "Outside Temp",
-          type: "spline",
-          yAxis: 2,
           data: []
         }
       ]
@@ -82,7 +76,7 @@ define(["jquery", "highcharts", "socketio"], function($, Highcharts, io) {
     );
 
     socket.on("loadavg", data => {
-      var series = chart.series[2];
+      var series = chart.series[1];
       series.addPoint([data.onemin], true, series.data.length > 100);
     });
     socket.on("memory", data => {
