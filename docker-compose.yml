@@ -17,16 +17,23 @@ services:
     build: ./data
     expose:
       - "8080"
-  picamera:
+  nodejs-picam:
     restart: always
-    build: ./picamera
+    build: ./nodejs-picam
     volumes:
       - 'resin-data:/data'
     privileged: true
-  video-stream:
-    build: ./video-stream
-    expose:
-      - "3000"
+
+#  picamera:
+#    restart: always
+#    build: ./picamera
+#    volumes:
+#      - 'resin-data:/data'
+#    privileged: true
+#  video-stream:
+#    build: ./video-stream
+#    expose:
+#      - "3000"
 
 #  gpio:
 #    build: ./gpio
