@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-picam",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "raspicam": "~0.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  }
+}
