@@ -4,6 +4,8 @@ volumes:
 services:
   frontend:
     build: ./frontend
+    volumes:
+      - 'resin-data:/data'
     expose:
       - "80"
   proxy:
