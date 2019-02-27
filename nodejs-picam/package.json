@@ -1,7 +1,15 @@
 {
   "name": "nodejs-picam",
   "version": "0.0.1",
+  "description": "nodejs extract timelapse for pi camera",
   "main": "app.js",
+  "homepage": "https://beeberry.co.za",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Bamber-Inc/BeeBerry.git"
+  },
+  "author": "Bryan Bamber <bryan@bamber.co.za>",
+  "license": "Apache-2.0",
   "dependencies": {
     "raspicam": "~0.2.14"
   },
