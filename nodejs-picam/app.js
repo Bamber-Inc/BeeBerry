@@ -1,9 +1,9 @@
 var RaspiCam = require("raspicam");
 
 var camera = new RaspiCam({
-	mode: "timelapse",
-	output: "/data/image.gif",
-	encoding: "gif",
+	mode: "photo",
+	output: "/data/image.jpg",
+	encoding: "jpg",
 	tl: "150",
 	hf: "true",
 	timeout: 180
