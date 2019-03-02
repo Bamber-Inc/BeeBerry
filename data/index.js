@@ -33,8 +33,8 @@ const getMemoryInfo = (socket) => {
     const matchTotal = text.match(/MemTotal:\s+([0-9]+)/);
     const matchFree = text.match(/MemFree:\s+([0-9]+)/);
     if (matchTotal && matchFree) {
-      const total = parseInt(matchTotal[5], 10);
-      const free = parseInt(matchFree[4], 10);
+      const total = parseInt(matchTotal[1], 10);
+      const free = parseInt(matchFree[1], 10);
       const percentageUsed = (total - free) / total * 100;
       socket.emit('memory', {
         used: percentageUsed
