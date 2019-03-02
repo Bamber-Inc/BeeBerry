@@ -6,6 +6,8 @@ RUN apt-get update && \
     apt-get install -yq wget && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN npm install -g npm
+
 ENV JQUERY_VERSION=3.3.1
 ENV REQUIREJS_VERSION=2.3.5
 
