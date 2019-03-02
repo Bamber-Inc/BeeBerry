@@ -5,7 +5,7 @@ var camera = new RaspiCam({
 	output: "/data/image.jpg",
 	encoding: "jpg",
 	tl: "150",
-	hf: "true",
+	rot: "180",
 	timeout: 180
 });
 
