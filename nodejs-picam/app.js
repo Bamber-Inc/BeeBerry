@@ -1,12 +1,13 @@
 var RaspiCam = require("raspicam");
 
 var camera = new RaspiCam({
-	mode: "photo",
-	output: "/data/image.jpg",
+	mode: "timelapse",
+	output: "/data/image%d.jpg",
 	encoding: "jpg",
+	tl: "1500",
 	ex: "auto",
 	rot: "180",
-	timeout: "60000"
+	t: "60000"
 });
 
 //listen for the "start" event triggered when the start method has been successfully initiated
