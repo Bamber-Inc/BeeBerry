@@ -8,13 +8,6 @@ services:
       - 'resin-data:/data'
     expose:
       - "80"
-  proxy:
-    build: ./haproxy
-    depends_on:
-      - frontend
-      - data
-    ports:
-      - "80:80"
   data:
     build: ./data
     expose:
@@ -44,3 +37,10 @@ services:
 #      - "/dev/mem:/dev/mem"
 #    cap_add:
 #      - SYS_RAWIO
+#   proxy:
+#    build: ./haproxy
+#    depends_on:
+#      - frontend
+#      - data
+#    ports:
+#      - "80:80"
