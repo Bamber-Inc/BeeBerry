@@ -5,7 +5,8 @@ var camera = new RaspiCam({
 	output: "/data/image.jpg",
 	encoding: "jpg",
 	ex: "auto",
-	rot: "180"
+	rot: "180",
+	timeout: "60000"
 });
 
 //listen for the "start" event triggered when the start method has been successfully initiated
