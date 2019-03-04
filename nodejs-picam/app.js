@@ -4,7 +4,7 @@ var camera = new RaspiCam({
 	mode: "photo",
 	output: "/data/image.jpg",
 	encoding: "jpg",
-	tl: "150",
+	ISO: "1000",
 	rot: "180",
 	timeout: 180
 });
