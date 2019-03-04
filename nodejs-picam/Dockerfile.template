@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package.json package.json
 
-RUN npm install --production
+RUN npm install --production \
+    npm install -g npm
 
 COPY . .
 
