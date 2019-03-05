@@ -27,7 +27,7 @@ var camera = new RaspiCam({
 	output: "tcp://0.0.0.0:3333",
 	t: "60000",
 	framerate: "2",
-	l: "true",
+	listen: "true",
 	ex: "auto",
 	rot: "180",
 });
