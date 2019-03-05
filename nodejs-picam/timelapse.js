@@ -34,7 +34,7 @@ camera.start();
 // loads of more options below
 
 //to stop a timelapse or video recording
-camera.stop();
+//camera.stop();
 
 
 //listen for the "stop" event triggered when the stop method was called
