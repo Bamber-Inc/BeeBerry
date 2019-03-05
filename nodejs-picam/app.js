@@ -24,7 +24,6 @@ var camera = new RaspiCam({
 var camera = new RaspiCam({
 	mode: "video",
 	output: "/data/video001.mp4",
-	b: "100000",
 	t: "6000",
 	fps: "10",
 	ex: "auto",
