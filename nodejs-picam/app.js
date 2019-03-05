@@ -12,20 +12,22 @@ var RaspiCam = require("raspicam");
 // Timelapse configuration
 //var camera = new RaspiCam({
 //	mode: "timelapse",
-//	output: "/data/image%03d.jpg",
+//	output: "/data/image%03d-today.jpg",
+//	latest: "/data/latest.jpg",
 //	encoding: "jpg",
-//	tl: "1500",
+//	tl: "10000",
 //	ex: "auto",
 //	rot: "180",
-//	t: "60000"
+//	t: "600000"
 //});
 
 // Video configuration - bitrate 0.1Mbits/s with timeout at 60s with 10 frames per second
 var camera = new RaspiCam({
 	mode: "video",
-	output: "/data/%Y-%m-%d%X.mp4",
+	output: "tcp://0.0.0.0:3333",
 	t: "60000",
-	fps: "2",
+	framerate: "2",
+	l: "true",
 	ex: "auto",
 	rot: "180",
 });
