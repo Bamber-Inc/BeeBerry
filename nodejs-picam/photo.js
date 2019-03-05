@@ -1,6 +1,6 @@
 var RaspiCam = require("raspicam");
 
- Photo configuration
+// Photo configuration
 var camera = new RaspiCam({
 	mode: "photo",
 	output: "/data/latest.jpg",
