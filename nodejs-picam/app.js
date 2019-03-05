@@ -23,9 +23,9 @@ var RaspiCam = require("raspicam");
 // Video configuration - bitrate 0.1Mbits/s with timeout at 60s with 10 frames per second
 var camera = new RaspiCam({
 	mode: "video",
-	output: "/data/video001.mp4",
+	output: "/data/%Y-%m-%d%X.mp4",
 	t: "60000",
-	fps: "10",
+	fps: "2",
 	ex: "auto",
 	rot: "180",
 });
