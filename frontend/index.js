@@ -10,4 +10,3 @@ app.use(express.static(__dirname + '/static'))
 server.listen(PORT, function() {
 	console.log("server is listening on port", PORT);
 });
-
