@@ -1,51 +1,28 @@
-version: '2'
-volumes:
-    resin-data:
-    picam_config:
+version: "2"
 services:
-  frontend:
-    build: ./frontend
-    volumes:
-      - 'resin-data:/data'
-    ports:
-      - "80:80"
-  data:
-    build: ./data
-    expose:
-      - "8080"
-  nodejs-picam:
-    restart: always
-    build: ./nodejs-picam
-    ports:
-      - "3333:3333"
-    volumes:
-      - 'resin-data:/data'
-      - 'picam_config:photo.js'
+  motioneye:
+    build: ./motioneye
+    # required for avahi to work properly inside the container
+    network_mode: host
+    # only effective if network_mode above is not set
+    # ports:
+    #   # Camera streaming endpoing, add others as needed
+    #   - "8081-8090:8081-8090"
+    #   # Web interface
+    #   - "80:80"
     privileged: true
+    volumes:
+      - etc:/etc/motioneye
+      - media:/var/lib/motioneye
+      - run:/var/run/motion
+    labels:
+      io.resin.features.kernel-modules: '1'
+      io.resin.features.firmware: '1'
 
-#  picamera:
-#    restart: always
-#    build: ./picamera
-#    volumes:
-#      - 'resin-data:/data'
-#    privileged: true
-#  video-stream:
-#    build: ./video-stream
-#    expose:
-#      - "3000"
-
-#  gpio:
-#    build: ./gpio
-#    devices:
-#      - "/dev/i2c-1:/dev/i2c-1"
-#      - "/dev/mem:/dev/mem"
-#    cap_add:
-#      - SYS_RAWIO
-
-#   proxy:
-#    build: ./haproxy
-#    depends_on:
-#      - frontend
-#      - data
-#    ports:
-#      - "80:80"
+volumes:
+  # Setting
+  etc:
+  # Saved images and video
+  media:
+  # PIDs
+  run:
